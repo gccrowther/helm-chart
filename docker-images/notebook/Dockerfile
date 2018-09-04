@@ -69,6 +69,7 @@ RUN pip install fusepy \
                 dask-kubernetes==0.4.0 \
                 xesmf \
                 nbserverproxy==0.8.1 \
+                opencv-python \
                 git+https://github.com/xgcm/xgcm \
                 --upgrade --no-cache-dir \
                 --upgrade-strategy only-if-needed
@@ -77,6 +78,7 @@ RUN pip install fusepy \
 RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager \
                                  @jupyterlab/hub-extension \
                                  @pyviz/jupyterlab_pyviz \
+                                 jupyterlab_bokeh \
                                  jupyter-leaflet
 
 RUN jupyter serverextension enable --py nbserverproxy jupyterlab --sys-prefix
